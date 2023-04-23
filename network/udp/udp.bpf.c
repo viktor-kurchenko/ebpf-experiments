@@ -5,7 +5,7 @@
 #include <string.h>
 
 SEC("tc")
-int ping(struct __sk_buff *skb) {
+int modify_payload(struct __sk_buff *skb) {
     void *data = (void *)(long)skb->data;
     void *data_end = (void *)(long)skb->data_end;
 
